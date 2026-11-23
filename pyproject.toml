@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aibotlog"
+version = "0.1.0"
+description = "Count AI crawler hits and AI-answer referrals in nginx or apache access logs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+aibotlog = "aibotlog.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
