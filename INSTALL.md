@@ -1,22 +1,22 @@
 # Install aibotlog
 
-Install Python 3.10 or newer and Git first. Git is needed for the GitHub install URL; alternatively download the repository ZIP, extract it, and run `python -m pip install .` in that folder.
+Install Python 3.10 or newer. Git is not required: the commands below install from the GitHub ZIP archive. If you have Git, `pip install git+https://github.com/masterxhackerx420-oss/aibotlog` works too.
 
 ## Windows (PowerShell)
 
 ```powershell
 py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install git+https://github.com/masterxhackerx420-oss/aibotlog
+.\.venv\Scripts\python.exe -m pip install https://github.com/masterxhackerx420-oss/aibotlog/archive/refs/heads/main.zip
 .\.venv\Scripts\aibotlog.exe --help
 ```
 
-No activation or execution-policy change required. IIS logs are usually under `%SystemDrive%\inetpub\logs\LogFiles` and may need to be in combined format.
+No activation or execution-policy change required. aibotlog reads nginx/apache combined log format only. IIS writes W3C format by default, which aibotlog does not parse (those lines are counted as skipped), so point it at nginx/apache logs or switch IIS to a custom NCSA combined format first.
 
 ## macOS / Linux
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install git+https://github.com/masterxhackerx420-oss/aibotlog
+.venv/bin/python -m pip install https://github.com/masterxhackerx420-oss/aibotlog/archive/refs/heads/main.zip
 .venv/bin/aibotlog --help
 ```
 
