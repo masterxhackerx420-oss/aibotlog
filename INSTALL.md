@@ -1,6 +1,6 @@
 # Install aibotlog
 
-Install Python 3.10 or newer. Git is not required: the commands below install from the GitHub ZIP archive. If you have Git, `pip install git+https://github.com/masterxhackerx420-oss/aibotlog` works too.
+Install Python 3.10 or newer. macOS/Linux install with Git (`git+https://...`). Windows uses the GitHub ZIP archive so Git isn't needed there.
 
 ## Windows (PowerShell)
 
@@ -16,7 +16,7 @@ No activation or execution-policy change required. aibotlog reads nginx/apache c
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install https://github.com/masterxhackerx420-oss/aibotlog/archive/refs/heads/main.zip
+.venv/bin/python -m pip install git+https://github.com/masterxhackerx420-oss/aibotlog
 .venv/bin/aibotlog --help
 ```
 
